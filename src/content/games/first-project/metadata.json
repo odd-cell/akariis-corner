@@ -1,0 +1,17 @@
+{
+  "title": "First Game Project",
+  "status": "in-development",
+  "description": "A 2D platformer adventure game with unique puzzle mechanics and a heartwarming story.",
+  "images": [
+    "/images/games/first-project/screenshot-1.jpg",
+    "/images/games/first-project/screenshot-2.jpg"
+  ],
+  "demoUrl": "https://itch.io/first-project-demo",
+  "devLogs": [
+    {
+      "date": "2024-03-07",
+      "title": "Project Kickoff",
+      "content": "Today marks the beginning of my first game development project. I've decided to create a 2D platformer that combines classic gameplay mechanics with unique puzzle elements. The game will follow the story of a young explorer discovering ancient mysteries in a forgotten world."
+    }
+  ]
+} 
