@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { FaPatreon } from 'react-icons/fa'
 
 const Navigation = () => {
   const navLinks = [
