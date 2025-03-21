@@ -13,7 +13,9 @@ export default function VideoCategories() {
   return (
     <div className="space-y-12">
       {categories.map(category => {
-        const categoryVideos = videos.filter(video => video.category === category)
+        const categoryVideos = videos
+          .filter(video => !video.hidden)
+          .filter(video => video.category === category)
         
         if (categoryVideos.length === 0) return null
 

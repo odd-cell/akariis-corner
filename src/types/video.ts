@@ -6,4 +6,5 @@ export interface Video {
   thumbnail: string;
   url: string;
   category: string;
+  hidden?: boolean;
 } 

@@ -1,25 +1,25 @@
-import { posts } from '@/data/posts'
-import PostCard from '@/components/journal/PostCard'
+import { getJournalPosts } from '@/lib/content'
+import JournalList from '@/components/journal/JournalList'
 
 export const metadata = {
   title: 'Journal | Akarii\'s Corner',
   description: 'My thoughts and experiences in game development, art, and content creation',
 }
 
-export default function JournalPage() {
+export default async function JournalPage() {
+  const posts = await getJournalPosts()
+  
   return (
-    <main className="flex-grow container mx-auto px-4 py-8">
-      <div className="max-w-7xl mx-auto space-y-8">
-        <h1 className="font-oswald text-4xl mb-8">Journal</h1>
-        
-        <div className="bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-teal-900/10 dark:to-cyan-900/10 rounded-3xl shadow-lg p-8 border border-teal-100">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {posts.map((post, index) => (
-              <PostCard key={index} {...post} />
-            ))}
-          </div>
-        </div>
-      </div>
+    <main className="container mx-auto px-4 py-8">
+      <h1 className="text-4xl font-bold mb-8">Journal</h1>
+      <JournalList posts={posts.map(post => ({
+        title: post.frontmatter.title,
+        description: post.frontmatter.description,
+        date: post.frontmatter.date,
+        image: post.frontmatter.coverImage,
+        slug: post.slug,
+        category: post.frontmatter.tags?.[0] || 'Uncategorized'
+      }))} />
     </main>
   )
 } 

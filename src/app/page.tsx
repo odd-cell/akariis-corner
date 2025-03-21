@@ -1,4 +1,4 @@
-import FeaturedCarousel from '@/components/FeaturedCarousel'
+import FeaturedCarousel from '@/components/ui/FeaturedCarousel'
 
 export default function Home() {
   return (

@@ -55,4 +55,39 @@ export interface FeaturedItem {
   image: string
   link: string
   type: 'article' | 'game' | 'video'
-} 
+}
+
+export interface ContentItem<T> {
+  content: string;
+  frontmatter: T;
+}
+
+export interface JournalFrontmatter {
+  title: string;
+  date: string;
+  description: string;
+  coverImage?: string;
+  tags?: string[];
+  hidden?: boolean;
+}
+
+export interface GameModel {
+  name: string;
+  description: string;
+  objFile: string;
+}
+
+export interface GameFrontmatter {
+  title: string;
+  description: string;
+  coverImage: string;
+  status: string;
+  technologies: string[];
+  features: string[];
+  models?: GameModel[];
+  platforms: string[];
+  classes: string[];
+  elements: string[];
+}
+
+export interface Game extends ContentItem<GameFrontmatter> {} 

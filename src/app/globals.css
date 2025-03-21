@@ -2,13 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --font-oswald: var(--font-oswald);
-  --font-noto: var(--font-noto);
-  --font-opensans: var(--font-opensans);
+@layer utilities {
+  .animate-gradient {
+    animation: gradient 8s ease infinite;
+    background-size: 200% 200%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 body {
+  @apply bg-body-white dark:bg-gray-900;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

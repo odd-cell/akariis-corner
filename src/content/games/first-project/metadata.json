@@ -1,17 +1,71 @@
 {
-  "title": "First Game Project",
-  "status": "in-development",
-  "description": "A 2D platformer adventure game with unique puzzle mechanics and a heartwarming story.",
-  "images": [
-    "/images/games/first-project/screenshot-1.jpg",
-    "/images/games/first-project/screenshot-2.jpg"
+  "id": "obsidian",
+  "title": "Obsidian",
+  "description": "An epic adventure where you help Anubis rebuild the Great Library. Dive into portals to explore enchanted books' worlds, facing themed enemies, platforming challenges, and group puzzles. Earn crafting resources to create real E-Books and unlock powerful spells.",
+  "coverImage": "/images/games/obsidian/cover.jpg",
+  "url": "/journal/2025/2025-03-14-obsidian-announcement",
+  "status": "In Development",
+  "technologies": ["Unity", "C#", "3D Graphics", "RPG Systems"],
+  "features": [
+    "4-button 3D rogue-lite action RPG combat",
+    "Character customization with multiple classes",
+    "Nine-element interaction system",
+    "Pseudo-randomized dungeons",
+    "Crafting and resource management",
+    "Library simulator features"
   ],
-  "demoUrl": "https://itch.io/first-project-demo",
-  "devLogs": [
+  "roadmap": {
+    "Q1_2025": [
+      "Initial planning and concept development",
+      "Core gameplay mechanics and story outline",
+      "Begin character design and environment concepts"
+    ],
+    "Q2_2025": [
+      "Complete basic character models and animations",
+      "Develop initial combat mechanics",
+      "Start implementing dungeon and puzzle systems"
+    ],
+    "Q3_2025": [
+      "Finalize class abilities and elemental interactions",
+      "Develop crafting and resource systems",
+      "Begin library simulator features"
+    ],
+    "Q4_2025": [
+      "Internal testing and adjustments",
+      "Prepare for beta testing phase",
+      "Develop marketing strategies and materials"
+    ],
+    "Q1_2026": [
+      "Conduct beta testing",
+      "Collect and analyze player feedback",
+      "Finalize game features and polish"
+    ],
+    "Q2_2026": [
+      "Final testing and bug fixing",
+      "Prepare for launch on all platforms"
+    ]
+  },
+  "platforms": ["Mobile", "Browser", "Desktop", "Console", "VR"],
+  "classes": [
     {
-      "date": "2024-03-07",
-      "title": "Project Kickoff",
-      "content": "Today marks the beginning of my first game development project. I've decided to create a 2D platformer that combines classic gameplay mechanics with unique puzzle elements. The game will follow the story of a young explorer discovering ancient mysteries in a forgotten world."
+      "name": "Sorcerer",
+      "description": "Master of arcane magic and elemental manipulation"
+    },
+    {
+      "name": "Rogue",
+      "description": "Stealthy fighter specializing in quick strikes and agility"
+    },
+    {
+      "name": "Cleric",
+      "description": "Divine spellcaster focused on healing and support"
+    },
+    {
+      "name": "Berserker",
+      "description": "Fierce warrior with powerful melee abilities"
     }
+  ],
+  "elements": [
+    "Fire", "Light", "Wind", "Electric", "Cosmic", 
+    "Ice", "Earth", "Shadow", "Water"
   ]
 } 

@@ -1,6 +1,6 @@
 # Akarii's Corner
 
-A serene game design journal showcasing development journey, featuring articles, videos, game builds, and commentary.
+A personal website showcasing my game development journey, projects, and thoughts. Built with Next.js and TypeScript.
 
 ## Features
 
@@ -22,167 +22,141 @@ A serene game design journal showcasing development journey, featuring articles,
 
 ## Getting Started
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-```
+First, run the development server:
 
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Run the development server:
 ```bash
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Updating Site Content
+## Content Management Guide
 
-### Home Page
-The home page features a carousel of featured content. To update:
+### Adding Journal Entries
 
-1. Edit `src/data/featured.ts`:
-```typescript
-export const featuredItems = [
-  {
-    id: string;
-    title: string;
-    description: string;
-    image: string;      // URL to image (local or Unsplash)
-    link: string;       // URL or internal path
-    type: 'article' | 'game' | 'video';
-  }
-]
+1. Create a new markdown file in `src/content/journal/[YEAR]/[YEAR]-[MONTH]-[DAY]-[slug].md`
+2. Include the following frontmatter at the top of your file:
+   ```markdown
+   ---
+   title: "Your Article Title"
+   date: "YYYY-MM-DD"
+   description: "A brief description of your article"
+   tags: ["tag1", "tag2", "tag3"]
+   coverImage: "/images/journal/your-cover-image.jpg"
+   ---
+   ```
+3. Write your content using Markdown syntax
+4. Add your cover image to `public/images/journal/`
+
+Example:
+```markdown
+---
+title: "The Anatomy of Bad Game Design"
+date: "2025-03-13"
+description: "An in-depth exploration of what makes games fail..."
+tags: ["game-design", "analysis", "game-development"]
+coverImage: "/images/journal/bad-game-analysis.jpg"
+---
+
+Your content here...
 ```
 
-### Journal Page
-The journal section displays your articles and blog posts.
+### Updating the Featured Carousel
 
-1. **Adding New Posts**
-   - Edit `src/data/posts.ts`:
+1. Open `src/components/FeaturedCarousel.tsx`
+2. Locate the `featuredItems` array
+3. Add or modify items using this format:
    ```typescript
-   export const posts: Post[] = [
-     {
-       title: string;
-       description: string;
-       date: string;        // YYYY-MM-DD format
-       image: string;       // URL to cover image
-       slug: string;        // URL-friendly title
-       category: string;    // e.g., "Development", "Design", "Art"
-     }
-   ]
+   {
+     id: [unique_number],
+     title: 'Your Title',
+     description: 'Brief description',
+     image: '/images/featured/your-image.jpg',
+     link: '/your-link-path',
+     type: 'article' | 'game' | 'video'
+   }
    ```
+4. Add featured images to `public/images/featured/`
+5. Images should be 1200x600 pixels for optimal display
 
-2. **Images for Posts**
-   - Option 1: Use Unsplash URLs (recommended for development)
-     ```typescript
-     image: "https://images.unsplash.com/photo-[id]?auto=format&fit=crop&w=800&q=80"
-     ```
-   - Option 2: Use local images
-     - Place images in `public/images/journal/`
-     - Reference as `/images/journal/your-image.jpg`
+### Adding Game Updates
 
-### Videos Page
-The videos page organizes content into scrollable categories.
-
-1. **Adding New Videos**
-   - Edit `src/data/videos.ts`:
-   ```typescript
-   export const videos: Video[] = [
-     {
-       id: string;          // Unique identifier
-       title: string;
-       description: string;
-       thumbnail: string;   // URL to thumbnail image
-       url: string;         // YouTube or other video URL
-       date: string;        // YYYY-MM-DD format
-       category: "Let's Plays" | "Analysis Videos" | "Development Videos";
-     }
-   ]
+1. Create a new game directory in `src/content/games/[game-slug]/`
+2. Add an `index.md` file with the following frontmatter:
+   ```markdown
+   ---
+   title: "Game Title"
+   description: "Game description"
+   coverImage: "/images/games/[game-slug]/cover.jpg"
+   url: "link-to-playable-version"
+   status: "In Development" | "Released" | "On Hold"
+   technologies: ["tech1", "tech2"]
+   ---
    ```
+3. Create game assets directory at `public/images/games/[game-slug]/`
+4. Add your game's cover image and other assets
 
-2. **Video Thumbnails**
-   - Option 1: Use Unsplash placeholders
-     ```typescript
-     thumbnail: "https://images.unsplash.com/photo-[id]?auto=format&fit=crop&w=800&q=80"
-     ```
-   - Option 2: Use local images
-     - Place thumbnails in `public/images/videos/`
-     - Reference as `/images/videos/your-thumbnail.jpg`
+### File Structure
 
-### Games Page
-The games page showcases your game development projects.
+```
+src/
+├── content/
+│   ├── journal/
+│   │   └── [YEAR]/
+│   │       └── YYYY-MM-DD-slug.md
+│   └── games/
+│       └── [game-slug]/
+│           └── index.md
+public/
+├── images/
+│   ├── journal/
+│   ├── games/
+│   │   └── [game-slug]/
+│   └── featured/
+```
 
-1. **Adding/Updating Games**
-   - Edit `src/data/games.ts`:
-   ```typescript
-   export const games: Game[] = [
-     {
-       id: string;          // Unique identifier
-       title: string;
-       description: string;
-       coverImage: string;  // URL to cover image
-       url: string;         // Link to game or project page
-       status: 'In Development' | 'Released' | 'On Hold';
-       technologies: string[];  // List of technologies used
-     }
-   ]
-   ```
+### Image Guidelines
 
-2. **Game Cover Images**
-   - Option 1: Use Unsplash placeholders
-     ```typescript
-     coverImage: "https://images.unsplash.com/photo-[id]?auto=format&fit=crop&w=800&q=80"
-     ```
-   - Option 2: Use local images
-     - Place images in `public/images/games/`
-     - Reference as `/images/games/your-image.jpg`
+- Journal covers: 1200x600px
+- Featured carousel: 1200x600px
+- Game covers: 1200x600px
+- Use .jpg for photographs
+- Use .png for graphics with transparency
+- Optimize images for web use
 
-### Image Management
+### Content Writing Tips
 
-1. **Directory Structure**
-   ```
-   public/
-   ├── images/
-   │   ├── journal/     # Journal post images
-   │   ├── videos/      # Video thumbnails
-   │   ├── games/       # Game cover images
-   │   └── featured/    # Featured content images
-   ```
+1. **Journal Posts**
+   - Use clear, descriptive titles
+   - Include relevant tags
+   - Break content into sections with headings
+   - Use images to illustrate points
 
-2. **Image Guidelines**
-   - Recommended dimensions:
-     - Featured images: 1200x630px
-     - Game covers: 800x450px
-     - Video thumbnails: 800x450px
-     - Journal images: 800x400px
-   - Format: JPG or PNG
-   - Max file size: 500KB
+2. **Game Updates**
+   - Keep status field updated
+   - List all technologies used
+   - Provide clear descriptions
+   - Include playable links when available
 
-3. **Using Placeholder Images**
-   - During development, you can use Unsplash images:
-     ```typescript
-     image: "https://images.unsplash.com/photo-[id]?auto=format&fit=crop&w=800&q=80"
-     ```
-   - Replace with your own images before production
+## Development
 
-### Styling
+This project uses:
+- [Next.js](https://nextjs.org) for the framework
+- [TypeScript](https://www.typescriptlang.org/) for type safety
+- [Tailwind CSS](https://tailwindcss.com) for styling
+- Markdown for content management
 
-#### Theme Colors
-- Cards use gradient backgrounds:
-  - Games: `from-violet-50 to-blue-50`
-  - Journal: `from-teal-50 to-cyan-50`
-  - Videos: `from-rose-50 to-orange-50`
-- Dark mode variants included with `/10` opacity
+## Deployment
 
-#### Card Components
-- Rounded corners: `rounded-3xl` for containers, `rounded-2xl` for cards
-- Translucent backgrounds: `bg-white/60 dark:bg-black/5`
-- Backdrop blur: `backdrop-blur-sm`
-- Subtle borders and shadows
+The site is deployed on [Vercel](https://vercel.com). Push to the main branch to trigger automatic deployment.
+
+## Learn More
+
+To learn more about the technologies used:
+- [Next.js Documentation](https://nextjs.org/docs)
+- [TypeScript Documentation](https://www.typescriptlang.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Markdown Guide](https://www.markdownguide.org)
 
 ## Project Structure
 

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { Oswald, Noto_Sans, Open_Sans } from 'next/font/google'
 import './globals.css'
-import Navigation from '@/components/Navigation'
-import Footer from '@/components/Footer'
+import Navigation from '@/components/layout/Navigation'
+import Footer from '@/components/layout/Footer'
 
 const oswald = Oswald({ subsets: ['latin'], variable: '--font-oswald' })
 const notoSans = Noto_Sans({ subsets: ['latin'], variable: '--font-noto' })

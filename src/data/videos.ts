@@ -6,6 +6,7 @@ interface Video {
   url: string
   date: string
   category: string
+  hidden?: boolean
 }
 
 export const videos: Video[] = [

@@ -1,0 +1,22 @@
+{
+  "title": "Untitled Pokémon Fan Game",
+  "description": "A Pokémon fan game inspired by East and Southern African culture, featuring unique regions, monsters, and storytelling.",
+  "coverImage": "/images/games/untitled-pokemon-fangame/cover.jpg",
+  "status": "In Development",
+  "technologies": ["RPG Maker XP", "Pokémon Essentials", "Procreate", "Photoshop", "Soundtrap"],
+  "features": [
+    "Custom Maps inspired by African landscapes",
+    "New Monsters based on local flora, fauna, and mythology",
+    "Deep Narrative with rich character development",
+    "8 Gyms",
+    "16 Cities",
+    "3 Safari Zones",
+    "7 Towns",
+    "7 Dungeons",
+    "12 Routes",
+    "7 Wonders"
+  ],
+  "platforms": ["Windows"],
+  "classes": ["RPG", "Adventure", "Monster Taming"],
+  "elements": ["Story-Driven", "Turn-Based Combat", "Exploration"]
+} 

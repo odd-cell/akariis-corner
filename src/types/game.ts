@@ -4,6 +4,6 @@ export interface Game {
   description: string;
   coverImage: string;
   url: string;
-  status: 'In Development' | 'Released' | 'On Hold';
+  status: string;
   technologies: string[];
 } 

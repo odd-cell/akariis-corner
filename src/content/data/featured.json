@@ -1,0 +1,18 @@
+{
+  "featuredItems": [
+    {
+      "type": "game",
+      "title": "Pixel Platformer",
+      "description": "A challenging platformer with unique mechanics and pixel art aesthetics.",
+      "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80",
+      "link": "/games/pixel-platformer"
+    },
+    {
+      "type": "post",
+      "title": "Welcome to My Game Dev Journey",
+      "description": "Join me as I embark on this exciting journey of game development.",
+      "image": "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=800&q=80",
+      "link": "/journal/2024/welcome-to-my-game-dev-journey"
+    }
+  ]
+} 

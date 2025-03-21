@@ -1,0 +1,33 @@
+{
+  "intro": {
+    "title": "About Me",
+    "content": "Hi, I'm Akarii! I'm a game developer and content creator passionate about creating unique gaming experiences that blend African culture with modern game design.",
+    "image": "/images/profile.jpg"
+  },
+  "mission": {
+    "title": "My Mission",
+    "content": "To create games that not only entertain but also showcase the rich diversity of African culture and storytelling through innovative gameplay mechanics and artistic expression."
+  },
+  "skills": [
+    {
+      "category": "Game Development",
+      "items": ["Unity", "C#", "Game Design", "Level Design"]
+    },
+    {
+      "category": "Art & Animation",
+      "items": ["Pixel Art", "2D Animation", "UI/UX Design"]
+    },
+    {
+      "category": "Content Creation",
+      "items": ["Video Editing", "Streaming", "Technical Writing"]
+    }
+  ],
+  "contact": {
+    "email": "contact@akariiscorner.com",
+    "social": {
+      "twitter": "@akariiscorner",
+      "youtube": "@akariiscorner",
+      "github": "odd-cell"
+    }
+  }
+} 
