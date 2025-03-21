@@ -1,18 +1,7 @@
 import { getGameBySlug } from '@/lib/content';
 import { Game } from '@/types/content';
 import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
 import { notFound } from 'next/navigation';
-import { Suspense } from 'react';
-
-const ModelViewer = dynamic(() => import('@/components/games/ModelViewer'), {
-  ssr: false,
-  loading: () => (
-    <div className="w-full h-[400px] rounded-lg overflow-hidden bg-gray-900 relative flex items-center justify-center">
-      <div className="text-white">Loading 3D Model...</div>
-    </div>
-  ),
-});
 
 interface GamePageProps {
   params: {
@@ -57,30 +46,6 @@ export default async function GamePage({ params }: GamePageProps) {
               <li key={index}>{feature}</li>
             ))}
           </ul>
-
-          {frontmatter.models && frontmatter.models.length > 0 && (
-            <>
-              <h2 className="text-2xl font-bold mt-8 mb-4">3D Models</h2>
-              <div className="grid gap-8">
-                {frontmatter.models.map((model, index) => (
-                  <Suspense 
-                    key={index} 
-                    fallback={
-                      <div className="w-full h-[400px] rounded-lg overflow-hidden bg-gray-900 relative flex items-center justify-center">
-                        <div className="text-white">Loading 3D Model...</div>
-                      </div>
-                    }
-                  >
-                    <ModelViewer
-                      objUrl={model.objFile}
-                      title={model.name}
-                      description={model.description}
-                    />
-                  </Suspense>
-                ))}
-              </div>
-            </>
-          )}
 
           <div className="grid grid-cols-2 gap-8 mt-8">
             <div>

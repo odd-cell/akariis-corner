@@ -71,12 +71,6 @@ export interface JournalFrontmatter {
   hidden?: boolean;
 }
 
-export interface GameModel {
-  name: string;
-  description: string;
-  objFile: string;
-}
-
 export interface GameFrontmatter {
   title: string;
   description: string;
@@ -84,7 +78,6 @@ export interface GameFrontmatter {
   status: string;
   technologies: string[];
   features: string[];
-  models?: GameModel[];
   platforms: string[];
   classes: string[];
   elements: string[];
