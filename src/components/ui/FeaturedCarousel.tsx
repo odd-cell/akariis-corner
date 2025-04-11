@@ -21,26 +21,26 @@ const FeaturedCarousel = () => {
   const featuredItems: FeaturedItem[] = [
     {
       id: 1,
-      title: 'A New Journey Awaits',
-      description: 'Embarking on a journey to create a Pokémon fan game that celebrates the rich cultural heritage of East and Southern Africa.',
-      image: '/images/featured/pokemon-fangame-announcement.jpg',
-      link: '/journal/2025/03-15-pokemon-fangame-announcement',
+      title: 'Pokémon Uhuru: Alpha Version Announcement & Professor Introduction',
+      description: "Introducing Pokémon Uhuru, an alpha build focusing on the Ishara region's story, map, and professors. Learn about the plot outline and meet Professors Acacia, Mangrove, and Blackwood.",
+      image: '/images/journal/pokemon-uhuru/PokemonUhuruCover.png',
+      link: '/journal/2025/04-11-pokemon-uhuru-alpha-announcement',
       type: 'article'
     },
     {
       id: 2,
-      title: 'The Anatomy of Bad Game Design',
-      description: 'Explore what makes games fail and how to avoid common pitfalls in game development',
-      image: '/images/featured/bad-game-analysis.jpg',
-      link: '/journal/2025/03-13-bad-game-analysis',
+      title: 'A New Journey Awaits',
+      description: 'Embarking on a journey to create a Pokémon fan game that celebrates the rich cultural heritage of East and Southern Africa.',
+      image: '/images/journal/pokemon-fangame-announcement.jpg',
+      link: '/journal/2025/03-15-pokemon-fangame-announcement',
       type: 'article'
     },
     {
       id: 3,
-      title: 'Welcome to Akarii\'s Corner',
-      description: 'Join me on my journey through game development, art, and content creation',
-      image: '/images/featured/welcome-cover.jpg',
-      link: '/journal/2025/03-12-welcome',
+      title: 'Introducing Obsidian: A Magical Library Adventure',
+      description: 'Announcing my latest project, Obsidian - an epic adventure where you help Anubis rebuild the Great Library...',
+      image: '/images/journal/obsidian-announcement.jpg',
+      link: '/journal/2025/03-14-obsidian-announcement',
       type: 'article'
     }
   ]
