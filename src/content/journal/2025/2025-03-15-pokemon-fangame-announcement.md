@@ -1,6 +1,6 @@
 ---
-title: "Announcing My African-Inspired Pokémon Fan Game"
-date: "2025-03-15"
+title: "A New Journey Awaits"
+date: "2025-03-20"
 description: "Embarking on a journey to create a Pokémon fan game that celebrates the rich cultural heritage of East and Southern Africa."
 tags: ["game-dev", "pokemon", "announcement"]
 coverImage: "/images/journal/pokemon-fangame-announcement.jpg"

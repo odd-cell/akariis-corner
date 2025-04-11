@@ -61,23 +61,23 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-footer-tan to-footer-oak mt-auto">
       <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="flex flex-wrap justify-center gap-4 md:gap-8">
           {socialLinks.map((link) => (
             <a
               key={link.name}
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-800 hover:text-gray-600 transition-colors group"
+              className="flex items-center gap-2 text-gray-800 hover:text-gray-600 transition-colors group p-2"
             >
               <span className="group-hover:scale-110 transition-transform">
                 {link.icon}
               </span>
-              <span className="font-noto">{link.name}</span>
+              <span className="font-noto text-sm md:text-base">{link.name}</span>
             </a>
           ))}
         </div>
-        <div className="text-center mt-8 text-gray-700">
+        <div className="text-center mt-8 text-gray-700 text-sm md:text-base">
           <p>&copy; {new Date().getFullYear()} Akarii&apos;s Corner. All rights reserved.</p>
         </div>
       </div>

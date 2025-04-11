@@ -11,6 +11,7 @@ const openSans = Open_Sans({ subsets: ['latin'], variable: '--font-opensans' })
 export const metadata: Metadata = {
   title: "Akarii's Corner",
   description: 'A serene game design journal showcasing development journey',
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
 }
 
 export default function RootLayout({
@@ -22,7 +23,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${oswald.variable} ${notoSans.variable} ${openSans.variable} font-opensans bg-body-white dark:bg-gray-900 dark:text-white min-h-screen flex flex-col`}>
         <Navigation />
-        {children}
+        <div className="flex-grow">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
